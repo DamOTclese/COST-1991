@@ -1,0 +1,91 @@
+
+;
+; Caling from area codes 334, 335, 812, 815, 852, 857, 914, 963, 969
+; October 1994
+;
+;                               Fredric Rice: 1:102/890
+;
+
+;
+; Local 818 that are directly dialable and no charges apply
+; Keywords required are: LOCAL XXX
+;
+
+Local 818
+    279 294 301 303 305 306 330 331 332 333 334 335 336
+    337 338 339 350 351 355 357 358 359 369 401 402 442
+    443 444 445 446 447 448 450 452 453 454 459 574 575
+    579 580 582 810 812 813 814 815 821 835 836 850 851
+    852 854 855 856 857 858 859 910 912 913 914 915 916
+    917 918 919 931 932 933 934 935 937 960 961 962 963
+    964 965 966 967 968 969
+
+;
+; Local 909 that are directly dialable and no charges apply
+; Keywords required are: LOCAL XXX
+;
+
+Local 909
+     207 305 392 394 396 397 398 399 444 445 468 469 482
+     592 593 594 595 596 598 599 603 607 612 620 621 622
+     623 624 625 626 629 860 861 865 868 869
+
+;
+; Zone 3, area code 818. Charges do apply. Dial Direct.
+; Keywords required are: ZONE X XXX
+;
+
+Zone 3 818
+     212 280 281 282 284 285 286 287 288 278 291 292 293
+     300 302 304 307 308 309 312 354 356 393 395 396 397
+     398 403 405 440 441 449 451 457 458 529 564 568 570
+     571 572 573 576 577 578 584 585 666 683 791 792 793
+     794 795 796 797 798 799 844
+
+;
+; Zone 3, area code 310. Charges do apply. Dial Direct.
+; Keywords required are: ZONE X XXX
+;
+
+Zone 3 310
+     463 690 691 692 693 694 695 696 697 698 699 801 902
+     903 905 906 907 908 941 942 943 944 945 946 947 948
+     949
+
+;
+; Zone 3, area code 714. Charges do apply. Dial Direct.
+; Keywords required are: ZONE X XXX
+;
+
+Zone 3 714
+     255 256 257 529 671 990
+
+;
+; Zone 3, area code 909. Charges do apply. Dial Direct.
+; Keywords required are: ZONE X XXX
+
+Zone 3 909
+     390 391 393 395 460 461 464 465 466 467 477 481 483
+     484 590 591 597 605 606 608 613 627 628 902 920 923
+     930 931 933 941 942 944 945 946 947 948 949 980 981
+     982 983 984 985 986 987 988 989
+
+;
+; Zone 3 cost .10 cents for the first minute and .04 cents
+; for each additional minute. Cost based on May/1991 prices.
+; Keywords required are: COST ZONE X XXX AND XXX
+;
+
+Cost Zone 3 .10 and .04
+
+;
+; Various discounts apply at various times. Use 24 hour clock.
+; Keywords required are: FROM XX TO XX XXX%. The percentage of
+; discount MUST have leading zeros.
+;
+
+From 08 to 17 100%
+From 17 to 23 030%
+From 23 to 08 060%
+
+

@@ -1,0 +1,140 @@
+
+                           Cost Program for
+                       FidoNetwork Nodelist Scanning
+               Fredric L. Rice  1:102/890.0  818-335-9601
+
+
+Packing List: (COST.ZIP)
+
+   Cost.Exe  - Execuable Calling Cost Program
+
+   Cost.C    - Source code to same
+
+   Cost.Bas  - Source code to same in BASIC!
+
+   Cost.Doc  - This file
+
+   Local.Dat - Sample Phone cost sheet with a calling area that includes
+               Azusa, Glendora, Clairmont, San Dimas, Covina,
+               Baldwin Park, Monrovia, San Gabriel Canyon
+
+Description:
+   This program will accept a phone number for examination and look it up to
+   see if it is a free call, a cheep zone call, or simply long distance. The
+   operator must supply this information, of course, by creating a file called
+   LOCAL.DAT, (a sample LOCAL.DAT is provided).
+
+Running it:
+
+   Type:   COST XXX-XXX-XXXX
+
+   This will cause the program to search through its Local.Dat file for the
+   number and offer a report on it.
+
+   Type:   COST <filename>
+
+   This will cause the program to search through <filename> nodelist for any
+   free nodes or nodes that are accessable as cheap zones. The operator is
+   offered the choice of having the output placed into a file or on the screen.
+
+Where to find cost information:
+
+   Located at the first pages of your White Pages, find an index into "Local
+   and ZUM Calling", (note that your phone company may index somewhat
+   differently than General Telephone). Search for "Local calling area from"
+   and find your city or town in the listings. The information provided tells
+   you what it free in the various area codes, and what diferent zones are cut
+   rate. Discount information on the zones for after-hours is also given.
+
+How to enter the information:
+
+   Produce a hard copy of LOCAL.DAT and get rid of it if you're certain you
+   have the archive copy: COST.ARC. You can use this information as a
+   guide-line.
+
+   Information contained within the file is mostly free-form except where
+   indicated. This means that any leading or trailing spaces on a line are
+   ignored. In addition, if you place more than one space between parameters,
+   only one space will be used to delimit the parameters internally. Tabs are
+   valid and will produce no errors. No verification of syntax takes place on
+   much of the information in this file.
+
+First:
+
+   First enter the area codes which are directly dialable and are callable at
+   no charge. Then list the telephone exchanges which are accessable under the
+   area code:
+
+   Area XXX
+      YYY YYY YYY YYY YYY
+      YYY YYY YYY YYY YYY
+
+   You may have only one area code on the "Area" line as a parameter and any
+   number of spaces may be placed between Area and XXX.
+
+   There may be any number of exchanges, (YYY), on a line, and any number of
+   lines under Area XXX. Any 3 digit number which follows Area will be treated
+   as an exchange. There may be any number of spaces between exchanges.
+
+   If there is another area code which is directly dialable at no charge,
+   simply start another Area XXX and list the exchanges, (YYY).
+
+Second:
+
+   List the Zones and Area codes of the cheap calls. Then list the exchanges
+   that are under that zone and area code. This looks something like this:
+
+   Zone X YYY
+      ZZZ ZZZ ZZZ ZZZ ZZZ
+      ZZZ ZZZ ZZZ ZZZ ZZZ
+      ZZZ
+
+   The X is the zone number as offered in the white pages. The YYY is the area
+   code for that zone where the exchanges are cheap calls, (ZZZ). Note that
+   any number of spaces may be between Zone, X, YYY, and/or ZZZ. Any number of
+   exchanges may be placed on a line and there may be any number of lines.
+
+   If there is another zone, simply add it.
+
+Third:
+
+   Now tell the computer what the cost of the zones are. This information is
+   offered in this format:
+
+   Cost Zone X YYY And ZZZ
+
+   This tells the computer that zone X has a cost of YYY for the first minute
+   and ZZZ for any minute after that. You MUST supply the keywords COST ZONE
+   and AND. Be sure to provide decimal points as though it were a dollar value.
+
+   If you have additional zones, provide ccost information simply by creating
+   more Cost Zone lines.
+
+Fourth:
+
+   The last thing to do is to tell the computer what the times and amounts of
+   the discounts, (if any), are available from your area. This information is
+   provided in the following format:
+
+   From XX To YY ZZZ%
+
+   Here, XX represents the starting hour of this particular discount or pay
+   rate while YY represents the ending hour. These two values MUST be 24 hour
+   times. The ZZZ% represents the discount. If full charges apply during this
+   time period, this value should be 100%. It is  very important to provide
+   the keyword "To".
+
+   If there are more time frames, simply list them in the same formmat as
+   offered above.
+
+Problems:
+
+   There won't be any but if there are, problems are usually created by
+   invalid formatting or the omission of some information. Check for tabs and
+   other control characters before you start debugging.
+
+Author:
+   Fredric Rice (1:102/890.0)
+   The Skeptic Tank: 818-335-9601
+
+
